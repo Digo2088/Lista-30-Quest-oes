@@ -1,0 +1,871 @@
+Questão 1:
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+	float dis,x1,x2,y1,y2;
+	
+	scanf("%f %f %f %f", &x1, &x2, &y1, &y2);
+	
+	dis=((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1));
+	
+	printf("%f", sqrt(dis));
+	
+    return 0;
+}
+
+Questão 2:
+int main()
+{
+	int a,b,c,r,s,d;
+	
+	scanf("%d %d %d",&a,&b,&c);
+	
+	r=(a+b)*(a+b);
+	printf(" %d\n", r);
+	
+	s=(b+c)*(b+c);
+	printf(" %d\n", s);
+	
+	d=(r+s)/2;
+	
+	printf("Resultado: %d\n", d);	
+    return 0;
+}
+
+Questão 3:
+#include <stdio.h>
+
+int main()
+{
+	int anos,meses,dias,result;
+	
+	scanf("%d %d %d",&anos,&meses,&dias);
+	
+	if(anos>=1){
+		result=365*anos;
+	}
+	if(meses>=1){
+		result=result+(30*meses);
+	}
+	if(dias>=1){
+		result=result+(1*dias);
+	}
+	
+	printf("%d",result);
+    return 0;
+}
+Questão 4:
+#include <stdio.h>
+
+int main()
+{
+	int anos,meses=0,result;
+	
+	scanf("%d", &result);
+	
+	if(result>=365){
+		while(result>=365){
+			anos+=1;
+			result-=365;
+		}
+	}
+	if(result>=30){
+		while(result>=30){
+			meses+=1;
+			result-=30;
+		}
+	}
+	printf("Anos= %d\n",anos);
+	printf("Meses= %d\n",meses);
+	printf("Dias= %d\n",result);
+	
+    return 0;
+}
+Questão 5:
+#include <stdio.h>
+
+int main()
+{
+	float n1,n2,n3,med;
+	
+	scanf("%f %f %f",&n1,&n2,&n3);
+	
+	med=((n1*2)+(n2*3)+(n3*5))/10;	
+	
+	printf("Media = %.1f",med);
+    return 0;
+}
+Questão 6:
+#include <stdio.h>
+
+int main()
+{
+	int seg,min,hrs;
+	
+	scanf("%d",&seg);
+	
+	if(seg>=3600){
+		while(seg>=3600){
+			hrs+=1;
+			seg-=3600;
+		}
+	}
+	if(seg>=60){
+		while(seg>=60){
+			min+=1;
+			aux-=60;
+		}
+	}
+	printf("Horas: %d\n",hrs);
+	printf("Minutos: %d\n",min);
+	printf("Segundos: %d\n",seg);
+	
+    return 0;
+}
+Questão 7:
+#include <stdio.h>
+
+int main()
+{
+
+	float cf,cc,pd,imp;
+	scanf("%f",&cf);
+	
+	pd=cf*0.28;
+	imp=cf*0.45;
+	
+	cc=cf+pd+imp;
+	
+	printf("Valor: %.2f",cc);
+	
+    return 0;
+}
+Questão 8:
+#include <stdio.h>
+
+int main()
+{	
+	float a,b,c,d,e,f,x,y;
+	
+	scanf("%f %f %f %f %f %f",&a,&b,&c,&d,&e,&f);
+	
+	x=(c*e)-(b*f)/(a*e)-(b*d);
+	
+	y=(a*f)-(c-d)/(a*e)-(b*d);
+	
+	printf("X= %.1f\n Y= %.1f\n", x,y);
+    return 0;
+}
+Questão 9:
+#include <stdio.h>
+
+int main()
+{	
+	float n1,n2,n3,med;
+	
+	scanf("%f %f %f",&n1,&n2,&n3);
+	
+	med=(n1+n2+n3)/3;
+	
+	if(med>=6){
+		printf("Media: %.1f\nAprovado\n",med);
+	}else{
+		printf("Media: %.1f\nReprovado\n",med);
+	}
+    return 0;
+}
+Questão 10:
+#include <stdio.h>
+
+int main()
+{	
+	int a,b,c,maior=0;
+	
+	scanf("%d %d %d",&a,&b,&c);
+	
+	printf("%d %d %d\n", a,b,c);
+	
+	if(a>maior){
+		maior=a;
+	}
+	if(b>maior){
+		maior=b;
+	}if(c>maior){
+		maior=c;
+	}else{
+		maior=maior;
+	}
+	printf("Maior valor %d",maior);
+
+	
+    return 0;
+}
+Questão 11:
+#include <stdio.h>
+
+int main()
+{	
+	int a,b;
+	
+	scanf("%d %d", &a,&b);
+	
+	if(a%b==0){
+		printf("Sao Multiplos");
+	}else{
+		printf("Nao Sao Multiplos");
+	}
+    return 0;
+}
+Questão 12:
+#include <stdio.h>
+
+int main()
+{	
+	int id;
+	
+	printf("Insira a Idade:\n");
+	scanf("%d", &id);
+	
+	if(id>=5 && id<=7){
+		printf("Infantil A\n");
+	}else if(id>=8 && id<=10){
+		printf("Infantil B\n");
+	}else if(id>=11 && id<=13){
+		printf("Juvenil A\n");
+	}else if(id>=14 && id<=17){
+		printf("Juvenil B\n");
+	}else if(id>=18){
+		printf("Adulto\n");
+	}
+    return 0;
+}
+Questão 13:
+#include <stdio.h>
+
+int main()
+{	
+	int x,y,z,aux=0;
+	scanf("%d %d %d", &x,&y,&z);
+	
+	if(aux<x){
+		aux=x;
+	}
+	if(aux<y){
+		aux=y;
+	}
+	if(aux<z){
+		aux=z;
+	}
+	printf("Maior valor: %d\n",aux);
+    return 0;
+}
+Questão 14
+#include <stdio.h>
+
+int main()
+{	
+	float n1,n2,n3,maior=0,med;
+	int id;
+	
+	printf("Insira o codigo do aluno:\n");
+	scanf("%d", &id);
+	
+	printf("Insira as notas do aluno:\n");
+	scanf("%f %f %f", &n1,&n2,&n3);
+	
+	if(n1>maior){
+		maior=n1;
+		med=((maior*4)+(n2*3)+(n3*3))/10;
+		n1=maior;
+	}
+	if(n2>maior){
+		n1=maior;
+		maior=n2;
+		med=((n1*3)+(maior*4)+(n3*3))/10;
+		n2=maior;
+	}
+	if(n3>maior){
+		n2=maior;
+		maior=n3;
+		med=((n1*3)+(n2*3)+(maior*4))/10;
+		n3=maior;
+	}
+	
+	printf("Codigo do aluno: %d\nNotas: %.1f %.1f %.1f\nMedia: %.1f\n",id,n1,n2,n3,med);
+	
+	if(med>=5){
+		printf("Aprovado");
+	}else{
+		printf("Reprovado");
+	}
+	
+    return 0;
+}
+Questão 15:
+#include <stdio.h>
+
+int main()
+{	
+	int n;
+	
+	scanf("%d",&n);
+	
+	printf("Valor e:\n");
+	
+	if(n%2==0){
+		printf("Par/");
+	}else{
+		printf ("Impar/");
+	}
+	if(n>=0){
+		printf("Positivo");
+	}else{
+		printf("Negativo");
+	}
+    return 0;
+}
+Questão 16:
+#include <stdio.h>
+
+int main()
+{	
+	float total;
+	int id,qnt;
+	
+	printf("Insira o codigo do produto:\n");
+	scanf("%d", &id);
+	
+	printf("Insira a quantidade do produto:\n");
+	scanf("%d",&qnt);
+	
+	switch(id){
+		case 100:
+			total=qnt*1.20;
+			printf("Valor a ser pago: %.2f",total);
+			break;
+		case 101:
+			total=qnt*1.30;
+			printf("Valor a ser pago: %.2f",total);
+			break;
+		case 102:
+			total=qnt*1.50;
+			printf("Valor a ser pago: %.2f",total);
+			break;
+		case 103:
+			total=qnt*1.20;
+			printf("Valor a ser pago: %.2f",total);
+			break;
+		case 104:
+			total=qnt*1.30;
+			printf("Valor a ser pago: %.2f",total);
+			break;
+		case 105:
+			total=qnt*1.00;
+			printf("Valor a ser pago: %.2f",total);
+			break;
+		
+		default:
+			printf("Codigo Invalido");
+			break;
+	} 
+    return 0;
+}
+Questão 17:
+#include <stdio.h>
+
+int main()
+{	
+	float h,pi;
+	int id;
+	
+	printf("Escolha o sexo:\n");
+	printf("1-Homem\n");
+	printf("2-Mulher\n");
+	scanf("%d", &id);
+	
+	printf("Agora insira sua altura:\n");
+	scanf("%f",&h);
+	
+	switch(id){
+		case 1:
+			pi=(72.7*h)-58;
+			printf("Peso Ideal: %.2f",pi);
+			break;
+		case 2:
+			pi=(62.1*h)-44.7;
+			printf("Peso Ideal: %.2f",pi);
+			break;
+	}
+	
+	
+    return 0;
+}
+Questão 18:
+#include <stdio.h>
+
+int main()
+{	
+	float vm, cd;
+	
+	scanf("%f",&vm);
+	
+	if(vm>=0 && vm<=200){
+		printf("Valor Medio: %.2f\nCredido: 0",vm);
+	}else if(vm>=201 && vm<=400){
+		cd=vm*0.2;
+		printf("Valor Medio: %.2f\nCredido: %.2f",vm,cd);
+	}else if(vm>=401 && vm<=600){
+		cd=vm*0.30;
+		printf("Valor Medio: %.2f\nCredido: %.2f",vm,cd);
+	}else if(vm>= 601){
+		cd=vm*0.40;
+		printf("Valor Medio: %.2f\nCredido: %.2f",vm,cd);
+	}
+    return 0;
+}
+Questão 19:
+#include <stdio.h>
+
+int main()
+{	
+	float n1,n2,n3,med;
+	int id;
+	printf("Insira Notas do aluno:\n");
+	scanf("%f %f %f",&n1,&n2,&n3);
+	printf("1 -Aritmetica\n2 -Ponderada(3,3,4)\n3 -Harmonica\n");
+	scanf("%d",&id);
+	
+	switch(id){
+		case 1:
+			med=(n1+n2+n3)/3;
+			printf("Media: %.1f",med);
+			break;
+		case 2:
+			med=((n1*3)+(n2*3)+(n3*4))/10;
+			printf("Media: %.1f",med);
+			break;
+		case 3:
+			med=3/((1/n1)+(1/n2)+(1/n3));
+			printf("Media: %.1f",med);			
+	}
+	
+	
+    return 0;
+}
+Questão 20:
+#include <stdio.h>
+
+int main()
+{	
+	float total=0;
+	int id,qnt,i=1;
+			
+		printf("Insira codigo do produto\n");
+		scanf("%d",&id);
+	
+		printf("Insira quantidade do produto\n");
+		scanf("%d",&qnt);
+		
+		switch(id){
+			case 1001:
+				total=total+(qnt*5.32);
+				break;
+			case 1324:
+				total=total+(qnt*6.45);
+				break;
+			case 6548:
+				total=total+(qnt*2.37);
+				break;
+			case 987:
+				total=total+(qnt*5.32);
+				break;
+			case 7623:
+				total=total+(qnt*6.45);				
+				break;			
+			default:
+				printf("Codigo Invalido\n");
+				break;
+		}
+		
+	printf("Total: %.2f",total);
+    return 0;
+}
+Questão 21:
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+	float total;
+	int qnt;
+	char id[4];
+	
+	scanf("%s",id);
+	
+	scanf("%d",&qnt);
+	
+	if(strcmp(id,"ABCD")==0){
+		total=5.30*qnt;
+	}else if(strcmp(id,"XYPK")==0){
+		total=6.00*qnt;
+	}else if(strcmp(id,"KLMP")==0){
+		total=3.20*qnt;
+	}else if(strcmp(id,"QRST")==0){
+		total=2.50*qnt;
+	}else{
+		printf("Codigo Invalido !!!");
+	}
+	printf("Total: %.2f",total);
+    return 0;
+}
+Questão 22:
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+	float sal,nsal,dif;
+	char cargo[10];
+	
+	
+	scanf("%f",&sal);
+	scanf("%s",cargo);
+	
+	if(strcmp(cargo,"GERENTE")==0){
+		nsal=sal+(sal*0.1);
+		dif=nsal-sal;
+		printf("Salario anterior: %.2f\nSalario novo: %.2f\nDiferenca: %.2f",sal,nsal,dif);
+	}else if(strcmp(cargo,"ENGENHEIRO")==0){
+		nsal=sal+(sal*0.2);
+		dif=nsal-sal;
+		printf("Salario anterior: %.2f\nSalario novo: %.2f\nDiferenca: %.2f",sal,nsal,dif);
+	}else if(strcmp(cargo,"TECNICO")==0){
+		nsal=sal+(sal*0.3);
+		dif=nsal-sal;
+		printf("Salario anterior: %.2f\nSalario novo: %.2f\nDiferenca: %.2f",sal,nsal,dif);
+	}else {
+		nsal=sal+(sal*0.4);
+		dif=nsal-sal;
+		printf("Salario anterior: %.2f\nSalario novo: %.2f\nDiferenca: %.2f",sal,nsal,dif);
+	}
+    return 0;
+}
+Questão 23:
+#include <math.h>
+
+int main()
+{
+	
+	float area,semip,a,b,c,sm,maior;
+	
+	scanf("%f %f %f", &a,&b,&c);
+	
+	if(a>maior){
+		
+		maior=a;
+		sm=b+c;
+		if(sm>maior){
+			semip=(maior+b+c)/2;
+			area=sqrt(semip*(semip-a)*(semip-b)*(semip-c));
+			
+		}else{
+			printf("%.1f %.1f %.1f",maior,b,c);
+		}
+	}
+	if(b>maior){
+		maior=b;
+		sm=a+c;
+		if(sm>maior){
+			semip=(a+maior+c)/2;
+			area=sqrt(semip*(semip-a)*(semip-b)*(semip-c));
+			
+		}else{
+			printf("%f %f %f",a,maior,c);
+		}
+				
+	}if(c>maior){
+		maior=c;
+		sm=a+b;
+		
+		if(sm>maior){
+			semip=(a+b+maior)/2;
+			area=sqrt(semip*(semip-a)*(semip-b)*(semip-c));
+			
+		}else{
+			printf("%f %f %f",a,b,maior);
+		}
+	}
+	
+	if(area>0){
+		printf("%.1f",area);
+	}	
+		
+    return 0;
+}
+Questão 24:
+#include <stdio.h>
+
+int main()
+{
+	int hi,hf,dur;
+	
+	scanf("%d %d",&hi,&hf);
+	
+	if(hf>hi){
+		dur=hf-hi;
+		printf("Duracao: %d",dur);
+	}else if(hi>hf){
+		dur=(24-hi)+hf;
+		printf("Duracao: %d",dur);
+	}
+    return 0;
+}
+Questão 25:
+#include <stdio.h>
+
+int main()
+{
+	int i;
+	float a,b,c,maior=0;
+	
+	scanf("%d",&i);
+	
+	scanf("%f %f %f",&a,&b,&c);
+	
+	switch(i){
+		
+		case 1:
+			if(a>b && b>c){
+				printf("%.2f %.2f %.2f",c,b,a);
+			}else if(a>c && c>b){
+				printf("%.2f %.2f %.2f",b,c,a);
+			}else if(b>a && a>c){
+				printf("%.2f %.2f %.2f",c,a,b);
+			}else if(b>c && c>a){
+				printf("%.2f %.2f %.2f",a,c,b);
+			}else if(c>a && a>b){
+				printf("%.2f %.2f %.2f",b,a,c);
+			}else if(c>b && b>a){
+				printf("%.2f %.2f %.2f",a,b,c);
+			}
+			break;
+		case 2:
+			if(a>b && b>c){
+				printf("%.2f %.2f %.2f",a,b,c);
+			}else if(a>c && c>b){
+				printf("%.2f %.2f %.2f",a,c,b);
+			}else if(b>a && a>c){
+				printf("%.2f %.2f %.2f",b,a,c);
+			}else if(b>c && c>a){
+				printf("%.2f %.2f %.2f",b,c,a);
+			}else if(c>a && a>b){
+				printf("%.2f %.2f %.2f",c,a,b);
+			}else if(c>b && b>a){
+				printf("%.2f %.2f %.2f",c,b,a);
+			}
+			break;
+		case 3:
+				if(a>b && b>c){
+				printf("%.2f %.2f %.2f",c,a,b);
+			}else if(a>c && c>b){
+				printf("%.2f %.2f %.2f",b,a,c);
+			}else if(b>a && a>c){
+				printf("%.2f %.2f %.2f",c,b,a);
+			}else if(b>c && c>a){
+				printf("%.2f %.2f %.2f",a,b,c);
+			}else if(c>a && a>b){
+				printf("%.2f %.2f %.2f",b,c,a);
+			}else if(c>b && b>a){
+				printf("%.2f %.2f %.2f",a,c,b);
+			}
+			break;
+	}
+	
+	
+	
+	
+    return 0;
+}
+Questão 26:
+#include <stdio.h>
+
+int main(){
+
+    int val,tr, cem , cin , vi , dez , cinc , dois; 
+
+    scanf("%d",&val);
+
+    tr = val;
+
+    cem = tr / 100;
+    tr = tr - (cem *100);
+
+    cin = tr / 50;
+    tr = tr - (cin * 50);
+
+    vi = tr / 20;
+    tr = tr - (vi * 20);
+
+    dez = tr /10;
+    tr = tr -(dez * 10);
+
+    cin = tr / 5;
+    tr = tr - (cin * 5);
+
+    dois = tr / 2;
+    tr = tr - (dois * 2);
+
+    printf("Valor decomposto : %d\n",val);
+    printf("Notas de 100 : %d\n",cem);
+    printf("Notas de 50 : %d\n",cin);
+    printf("Notas de 20 : %d\n",vi);
+    printf("Notas de 10 : %d\n",dez);
+    printf("Notas de 5 : %d\n",cinc);
+    printf("Notas de 2 : %d\n",dois);
+    printf("Notas de 1 : %d\n",tr);
+
+
+   return(0);
+}
+Questão 27:
+#include <stdio.h>
+
+int main()
+{
+	float val1,val2,sp,ipi,qnt1,qnt2;
+	
+	printf("Porcentagem do IPI:\n");
+	scanf("%f",&ipi);
+	
+	printf("Valor unitario das pecas:\n");
+	scanf("%f %f",&val1,&val2);
+	
+	printf("Quantidade dos Produtos\n");
+	scanf("%f %f",&qnt1,&qnt2);
+	
+	sp=((val1*qnt1+val2*qnt2));
+	sp=sp*((ipi/100)+1);
+	
+	printf("Valor a ser pago: %.2f",sp);
+	
+	
+    return 0;
+}
+Questão 28:
+#include <stdio.h>
+
+int main()
+{
+	float hi,mi,hf,mf,hd;
+	int md;
+	
+	printf("Hora e minuto de inicio:\n");
+	scanf("%f %f",&hi,&mi);
+	
+	printf("Hora e minuto do fim:\n");
+	scanf("%f %f",&hf,&mf);
+	
+	if(hf>hi){
+		md=mi+mf;
+		hd=(hf-hi)-(md/100);
+		printf("%.0f : %.0f",hd,md);
+		
+	}else if(hi>hf){
+		md=mi+mf;
+		hd=((24-hi)+hf)-(md/100);
+		printf("%.0f : %.0f",hd,md);
+	}
+    return 0;
+}
+Questão 28:
+#include <stdio.h>
+
+int main()
+{
+	float hi,mi,hf,mf,hd;
+	int md;
+	
+	printf("Hora e minuto de inicio:\n");
+	scanf("%f %f",&hi,&mi);
+	
+	printf("Hora e minuto do fim:\n");
+	scanf("%f %f",&hf,&mf);
+	
+	if(hf>hi){
+		md=mi+mf;
+		hd=(hf-hi)-(md/100);
+		printf("%.0f : %.0f",hd,md);
+		
+	}else if(hi>hf){
+		md=mi+mf;
+		hd=((24-hi)+hf)-(md/100);
+		printf("%.0f : %.0f",hd,md);
+	}
+    return 0;
+}
+Questão 29:
+#include <stdio.h>
+
+int main()
+{
+	float n1,n2,n3,me,ma;
+	int id;
+	
+	scanf("%d",&id);
+	scanf("%f %f %f",&n1,&n2,&n3);
+	
+	me=(n1+n2+n3)/3;
+	
+	ma=(n1+(n2*2)+(n3*3+me))/7;
+	
+	printf("Numero do Aluno: %d\n",id);
+	printf("Notas do Aluno: %.1f %.1f %.1f\n",n1,n2,n3);
+	printf("Media dos Exercicios: %.1f\n",me);
+	printf("Media de Aproveitamento: %.1f\n",ma);
+	
+	if(ma>=6.0){
+		printf("Aprovado\n");
+		if(ma>=6 && ma<7.5){
+			printf("Conceito: C\n");
+		}else if(ma>=7.5 && ma<9){
+			printf("Conceito:B\n");
+		}else if(ma>=9){
+			printf("Conceito: A\n");
+		}
+	}else{
+		printf("Reprovado\n");
+		if(ma>=4 && ma<6){
+			printf("Conceito: D\n");
+		}else{
+			printf("Conceito: E\n");
+		}
+	}
+	
+    return 0;
+}
+Questão 30:
+#include <stdio.h>
+
+int main()
+{
+	float ind;
+	
+	printf("Insira Indice de Poluicao:\n");
+	scanf("%f",&ind);
+	
+	if(ind>=0.3 && ind<0.4){
+		printf("Industrias do grupo 1 devem suspender as atividades");
+	}else if(ind>=0.4 && ind<0.5){
+		printf("Industrias do grupo 1 e 2 devem suspender as atividades");
+	}else if(ind>= 0.5){
+		printf("Todas as industrias devem suspender as atividades");
+	}
+    return 0;
+}
+
+
+
+
