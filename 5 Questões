@@ -1,0 +1,153 @@
+# Lista-30-Quest-oes
+
+Questão 1
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+	int x,y,centx,centy,r,d;
+	
+	printf("Dados Necessario(Coordenadas em Ordem Eixo X Y):\n\nCoordenadas do centro;\nRaio do Circulo;\nPontos a Serem Testados.\n");
+	scanf("%d %d %d %d %d",&centx,&centy,&r,&x,&y);
+	
+	d=sqrt(((x-centx)*(x-centx)+(y-centy)*(y-centy)));
+	
+	if(d>r){
+		printf("Fora do Circulo\nDistancia(X,Y): %d",d);
+	}else if(d<=r){
+		printf("Dentro do Circulo\nDistancia(X,Y): %d",d);
+		
+	}
+    return 0;
+}
+Questão 2
+#include <stdio.h>
+
+int main()
+{
+	float n1,n2,med,g2,mf;
+	
+	
+
+	printf("Insira a 1 Nota do Aluno:\n");
+	scanf("%f",&n1);
+	printf("Insira a 2 Nota do Aluno:\n");
+	scanf("%f",&n2);
+	
+	med= (n1+n2)/2;
+	
+	if(med>=7.0){
+		printf("Aprovado em G1\n%.1f\n",med);
+	}else if(med<7.0 && med>=4.0){
+		printf("Insira Nota da G2:\n");
+		scanf("%f",&g2);
+		mf=(med+g2)/2;
+		if(mf>=5.0){
+			printf("Aprovado\n%.1f",mf);
+		}else{
+			printf("Reprovado\n%.1f",mf);
+		}
+	}
+	
+    return 0;
+}
+Questão 3
+#include <stdio.h>
+
+int main()
+{	
+	int id;
+	
+	printf("Insira a Idade do Nadador:\n");
+	scanf("%d", &id);
+	
+	if(id>=5 && id<=7){
+		printf("Infantil A\n");
+	}else if(id>=8 && id<=10){
+		printf("Infantil B\n");
+	}else if(id>=11 && id<=13){
+		printf("Juvenil A\n");
+	}else if(id>=14 && id<=17){
+		printf("Juvenil B\n");
+	}else if(id>=18){
+		printf("Adulto\n");
+	}
+    return 0;
+}
+Questão 4
+#include <stdio.h>
+
+int main()
+{	
+	int id;
+	
+	printf("* * * * * * * * *\n");
+	printf("*     Menu      *\n");
+	printf("* 1- Gravar     *\n");
+	printf("* 2- Carregar   *\n");
+	printf("* 3- Apagar     *\n");
+	printf("* 4- Inserir    *\n");
+	printf("* 5- Fim        *\n");
+	printf("* * * * * * * * *\n");
+	scanf("%d",&id);
+	
+	switch(id){
+		case 1:
+			printf("Opcao Escolhida: Gravar");
+			break;
+		case 2:
+			printf("Opcao Escolhida: Carregar");
+			break;
+		case 3:
+			printf("Opcao Escolhida: Apagar");
+			break;
+		case 4:
+			printf("Opcao Escolhida: Inserir");
+			break;
+		case 5:
+			printf("Opcao Escolhida: Fim");
+			break;
+	}
+    return 0;
+}
+Questão 5
+#include <stdio.h>
+int main()
+{
+	float n1,n2,n3,me,ma;
+	int id;
+	printf("Insira a Identificacao do Aluno:\n");
+	scanf("%d",&id);
+	printf("Insira as Notas:\n");
+	scanf("%f %f %f",&n1,&n2,&n3);
+	
+	me=(n1+n2+n3)/3;
+	
+	ma=(n1+(n2*2)+(n3*3+me))/7;
+	
+	printf("Numero do Aluno: %d\n",id);
+	printf("Notas do Aluno: %.1f %.1f %.1f\n",n1,n2,n3);
+	printf("Media dos Exercicios: %.1f\n",me);
+	printf("Media de Aproveitamento: %.1f\n",ma);
+	
+	if(ma>=6.0){
+		printf("Aprovado\n");
+		if(ma>=6 && ma<7.5){
+			printf("Conceito: C\n");
+		}else if(ma>=7.5 && ma<9){
+			printf("Conceito:B\n");
+		}else if(ma>=9){
+			printf("Conceito: A\n");
+		}
+	}else{
+		printf("Reprovado\n");
+		if(ma>=4 && ma<6){
+			printf("Conceito: D\n");
+		}else{
+			printf("Conceito: E\n");
+		}
+	}
+	
+    return 0;
+}
